@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/addstudent.css">
+<div class="background"></div>
+
+<div class="container">
+    
+    <div class="signup-box">
+        <h1>Add Student Details</h1>
+        <form class="signup-form" action="/student/create" method="post">
+
+
+            <div class="input-container">    
+                <input type="text" class="text-input"  placeholder="" autocomplete="off" id="name" name="name" required>
+                <label for="name" class="label">Name</label>
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="text-input"  placeholder="" autocomplete="off" id="addno" name="admissionno" required>
+                <label for="addno" class="label">Admission Number</label>
+            </div>
+            
+            <div class="input-container">    
+              <input type="text" class="text-input"  placeholder="" autocomplete="off" id="regno" name="regno" required>
+              <label for="regno" class="label">Register Number</label>
+          </div>
+            
+            <div class="input-container">    
+                <input type="text" class="text-input"  placeholder="" autocomplete="off" id="dob" name="dob" required>
+                <label for="dob" class="label">Date Of Birth</label>
+            </div>
+
+            <div class="input-container">    
+                <input type="text" class="text-input" placeholder="" autocomplete="off" id="city" name="city" required>
+                <label for="city" class="label">City</label>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Enter</button>
+            </div>
+                
+        </form>
+    </div>
+</div>

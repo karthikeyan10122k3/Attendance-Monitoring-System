@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/css/staff.css">
+<header>
+    <nav class="navbar">
+        <div class="logo">Attendance System</div>
+        <ul class="nav-links">
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="/staff/profile">Profile</a></li>
+            <li><a href="/staff/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <section class="sidebar">
+            <h2>Welcome</h2>
+            <ul class="sidebar-links">
+                <li><a href="#">Manage Student</a></li>
+                <li><a href="#">Generate Attendance</a></li>
+            </ul>
+        </section>
+
+        <section class="content">
+            <h2>Student Management</h2>
+            <div class="action-buttons">
+                <a href="/student/addpage"><button class="add-button">Add Student</button></a>
+            </div>
+        </section>
+</main>
+<div class="table-container">
+<section>
+    <% if(studentData.length != 0){ %>
+        <table id="t1" cellpadding="10" cellspacing="7" style="text-align: center;">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Register No</th>
+                <th>Date of Birth</th>
+                <th>Present/Absent</th>
+                <th>No of days attended</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for(let student of studentData){ %>
+                    <tr>
+                        <td><%= student.name %></td>
+                        <td><%= student.regno %></td>
+                        <td><%= student.dob %></td>
+                        <td><button class="pre"><a href="/student/present/?id=<%= student.id %>">Present</a></button>
+                            <button class="abs"><a href="/student/absent/?id=<%= student.id %>">Absent</a></button>
+                        </td>
+                        <td><%= student.daysattended %></td>
+                    </tr>
+                    
+                    <button><a href="/student/delete/?studentId=<%= student._id %>&staffId=<%= student.teacher %>">X</a></button>
+                <% } %>
+            </tbody>
+          </table>
+    <% } %>
+      
+</section>
+</div>
+
+
+
+
+
+
+<footer class="footer">
+    <p>&copy; 2023 Student Attendance System</p>
+</footer>

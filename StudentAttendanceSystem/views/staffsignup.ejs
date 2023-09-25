@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="/css/signup.css">
+<div class="background"></div>
+
+<div class="container">
+    
+    <div class="signup-box">
+        <h1>Sign Up</h1>
+        <form class="signup-form" action="/staff/create" method="post">
+
+
+            <div class="input-container">    
+                <input type="text" class="text-input"  placeholder="" autocomplete="off" id="username" name="username" >
+                <label for="username" class="label">Username</label>
+            </div>
+
+            <div class="input-container">
+                <input type="email" class="text-input"  placeholder="" autocomplete="off" id="email" name="email" >
+                <label for="email" class="label">E-mail id</label>
+            </div>
+
+            <div class="input-container">    
+                <input type="text" class="text-input"  placeholder="" autocomplete="off" id="userid" name="userid" >
+                <label for="userid" class="label">User-ID</label>
+            </div>
+            
+            <div class="input-container">    
+                <input type="password" class="text-input" placeholder="" autocomplete="off" id="password" name="password" >
+                <label for="password" class="label">Password</label>
+            </div>
+
+            <div class="input-container">
+                <input type="password" class="text-input" placeholder="" autocomplete="off" id="confirm-password" name="confirm-password" >
+                <label for="confirm-password" class="label">Confirm Password</label>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Sign Up</button>
+            </div>
+                
+        </form>
+        <div class="signin-link">
+            <p class="login-link">Already have an account? <a href="/staff/login">sign in here</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to validate the form
+    function validateForm() {
+        // Get form elements
+        var username = document.getElementById("username");
+        var email = document.getElementById("email");
+        var userid = document.getElementById("userid");
+        var password = document.getElementById("password");
+        var confirmPassword = document.getElementById("confirm-password");
+
+        // Regular expressions for validation
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        // Flag to track if there are any validation errors
+        var hasErrors = false;
+
+        // Validation for username (non-empty)
+        if (username.value.trim() === "") {
+            alert("Username is required");
+            hasErrors = true;
+        }
+
+        // Validation for email (non-empty and valid format)
+        if (email.value.trim() === "" || !emailRegex.test(email.value)) {
+            alert("Please enter a valid email address");
+            hasErrors = true;
+        }
+
+        // Validation for userid (non-empty)
+        if (userid.value.trim() === "") {
+            alert("User-ID is required");
+            hasErrors = true;
+        }
+
+        // Validation for password (non-empty and at least 8 characters with one uppercase letter, one lowercase letter, and one digit)
+        if (password.value.trim() === "" || !passwordRegex.test(password.value)) {
+            alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one digit.");
+            hasErrors = true;
+        }
+
+        // Validation for confirming the password
+        if (password.value !== confirmPassword.value) {
+            alert("Passwords do not match");
+            hasErrors = true;
+        }
+
+        // Prevent form submission if there are errors
+        if (hasErrors) {
+            return false;
+        }
+
+        return true;
+    }
+
+    // Add form submit event listener
+    document.querySelector(".signup-form").addEventListener("submit", function (e) {
+        if (!validateForm()) {
+            e.preventDefault(); // Prevent form submission if there are errors
+        }
+    });
+</script>

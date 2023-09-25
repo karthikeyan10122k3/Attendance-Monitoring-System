@@ -1,0 +1,96 @@
+/* Reset some default styles */
+/* body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+} */
+
+.background {
+    background-image: url(/images/homepage.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.header {
+    background-color: #007BFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav li:hover{
+    border-bottom: 2px solid white;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.about, .contact {
+    background-color: #e6e6e6;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.about h2, .contact h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,145 @@
+/* body, h2, header, nav, ul, li, a, p {
+  margin: 0;
+  padding: 0;
+} */
+
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+
+} */
+
+header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 20%;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+  background-color: #0056b3;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.add-button:hover{
+  background-color:white;
+  color:  #0056b3;
+  border:2px solid #0056b3;
+  
+}
+
+
+
+/* Apply styles to the container div */
+.table-container {
+  width: 93%; /* Make the container fill the parent element */
+  overflow-x: auto; /* Add horizontal scrolling if the table overflows */
+}
+
+/* Apply styles to the table */
+table {
+  width: 100%; /* Make the table fill the container */
+  border: none;
+}
+
+th{
+  font-size: 1.2rem;
+}
+
+/* Add additional table styles as needed */
+/* table, th, td {
+  border: 1px solid black; Optional: Add borders to table, th, and td elements
+} */
+
+ .pre{
+  border: none;
+  background-color: rgb(1, 122, 1);
+  color: white;
+ }
+ .abs{
+  border: none;
+  background-color:rgb(243, 16, 16);
+  color: white;
+ }
